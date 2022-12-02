@@ -1,8 +1,10 @@
 import React from "react";
-import { players } from "./dummyPlayers";
+
+// import { players } from "./dummyPlayers";
 // import getPlayers from "./apiData";
 
 const PlayersList = ({players}) => {
+
 // console.log('this is playerlist', {props})
    
     
@@ -25,6 +27,7 @@ const PlayersList = ({players}) => {
                 })
             }
     //   </div>
+
     
 )}
 
