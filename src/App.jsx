@@ -5,7 +5,7 @@ import PlayersList from './playersList'
 import getPlayers from './apiData'
 // import SinglePlayer from './singlePlayer'
 
-
+console.log("hello there");
 
 // const NavBar = (props) => {
 //   const players = props.players
