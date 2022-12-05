@@ -1,4 +1,5 @@
 import React from "react";
+import PlayersRow from "./playersRow";
 
 // import { players } from "./dummyPlayers";
 // import getPlayers from "./apiData";
@@ -6,7 +7,7 @@ import React from "react";
 const PlayersList = ({players}) => {
 
 // console.log('this is playerlist', {props})
-   
+const { fetchSinglePlayer, setSelectedPlayer } = {players};
     
     return (
       <div id='all-players-container' className="App">
@@ -14,19 +15,13 @@ const PlayersList = ({players}) => {
                 players.map((player) => {
 // console.log(player);
                 return(
-                    <div className="single-player-card">
-                      <div className="header-info">
-                        <p className="pup-title">{player.name}</p>
-                        <p className="pup-number">#{player.id}</p>
-                      </div>
-                      <img src={player.imageUrl}/>
-                      <button className="detail-button" data-id={player.id}>See details</button>
-                      <button className="delete-button" data-id={player.id}>Remove from roster</button>
-                    </div>
+                  <PlayersRow player= {player} key={player.idx} fetchSinglePlayer={fetchSinglePlayer}
+                  setSelectedPlayer={setSelectedPlayer} />
+                    
                 )
                 })
             }
-    //   </div>
+      </div>
 
     
 )}

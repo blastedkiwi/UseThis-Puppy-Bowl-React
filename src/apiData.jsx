@@ -10,7 +10,7 @@ const fetchAllPlayers = async () => {
     try {
       const response = await fetch (`${APIURL}players`)
       const data = await response.json();
-      console.log('this is in api' , data.data.players);
+      //console.log('this is in api' , data.data.players);
       return data.data.players;
     }
     catch (error){
@@ -18,8 +18,17 @@ const fetchAllPlayers = async () => {
     }
 }
 
-
-
+//need to fix this to get the other components to work
+export const fetchSinglePlayer = async (username) => {
+    try {
+      const response = await fetch (`${APIURL}players/${username}`)
+      const data = await response.json();
+      // console.log(data);
+      return data.data.player;
+    } catch (error) {
+      console.error(error)
+    }
+}
 
 
 
