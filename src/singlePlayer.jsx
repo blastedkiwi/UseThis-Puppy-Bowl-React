@@ -1,17 +1,29 @@
 import React from "react";
-// import { fetchSinglePlayer } from "./apiData";
+import { fetchSinglePlayer } from "./apiData";
 
-//need to have the single player data to populate here
-const SinglePlayer = ({ selectedPlayer }) => {
-    return (
-        <div>
-            <p>ID: {selectedPlayer.id}</p>
-            <p>Name: {selectedPlayer.name}</p>
-            <p>Breed: {selectedPlayer.breed}</p>
-            <p>Status: {selectedPlayer.status}</p>
-            <img src="http://r.ddmcdn.com/w_912/s_f/o_1/cx_51/cy_0/cw_912/ch_1368/APL/uploads/2019/12/Anise-PBXVI.jpg"/>
-        </div>
-    )
-}
+const SinglePlayer = (props) => {
+  console.log(props);
+  // useEffect(() => {
+  //   const getPlayer = async () => {
+  //     const response = await fetchSinglePlayer();
+  //     setSelectedPlayer(response);
+  //     console.log("this is main", selectedPlayer);
+  //   };
+  //   getPlayer();
+  // });
 
-export default SinglePlayer
+  return (
+    <div className="single-player-view">
+      <div className="header-info">
+        <p className="pup-title">title</p>
+        <p className="pup-number">pup#</p>
+      </div>
+      <p>Team: </p>
+      <p>Breed: </p>
+      <img />
+      <button id="see-all">Back to all players</button>
+    </div>
+  );
+};
+
+export default SinglePlayer;
