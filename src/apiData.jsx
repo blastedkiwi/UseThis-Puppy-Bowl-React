@@ -27,19 +27,6 @@ export const fetchSinglePlayer = async (playerId) => {
   }
 };
 
-// export const fetchSinglePlayer = async (playerId) => {
-//   console.log(playerId);
-//   try {
-//     const response = await fetch(`${APIURL}/players/${playerId}`);
-//     const data = await response.json();
-//     console.log('this is fetchSP' , data);
-//     setSelectedPlayer(data);
-//     return data.data.player;
-//   } catch (error) {
-//     console.error(`Oh no, trouble fetching player #${playerId}!`, err);
-//   }
-// };
-
 export const removePlayer = async (playerId) => {
   try {
     const response = await fetch(`${APIURL}/players/${playerId}`, {

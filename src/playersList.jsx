@@ -18,8 +18,7 @@ const PlayersList = ({ players, fetchSinglePlayer }) => {
             <button
               onClick={() => fetchSinglePlayer(player.id)}
               className="detail-button"
-              data-id={player.id}
-            >
+              data-id={player.id}>
               See details
             </button>
             <button className="delete-button" data-id={player.id}>

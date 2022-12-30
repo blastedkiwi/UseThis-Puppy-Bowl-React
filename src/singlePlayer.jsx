@@ -2,15 +2,13 @@ import React from "react";
 import { fetchSinglePlayer } from "./apiData";
 
 const SinglePlayer = (props) => {
-  console.log(props);
-  // useEffect(() => {
-  //   const getPlayer = async () => {
-  //     const response = await fetchSinglePlayer();
-  //     setSelectedPlayer(response);
-  //     console.log("this is main", selectedPlayer);
-  //   };
-  //   getPlayer();
-  // });
+  console.log('this is props', props);
+    const getPlayer = async () => {
+      const response = await fetchSinglePlayer();
+      setSelectedPlayer(response);
+      console.log("this is main", selectedPlayer);
+    };
+    getPlayer();
 
   return (
     <div className="single-player-view">
